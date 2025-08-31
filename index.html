@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zero → Legend: Interactive CS & Systems</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Zero → Legend</div>
+    <input id="search" type="search" placeholder="Search lessons, topics, or tags… (Press / to focus)" aria-label="Search">
+    <div class="actions">
+      <button id="toggleSidebar" title="Toggle sidebar">☰</button>
+      <button id="resetProgress" title="Reset progress">⟲</button>
+    </div>
+  </header>
+  <div class="layout">
+    <aside id="sidebar">
+      <div class="nav-header">
+        <strong>Curriculum</strong>
+        <div class="filters">
+          <label><input type="checkbox" id="filterComplete"> Hide completed</label>
+        </div>
+      </div>
+      <nav id="nav"></nav>
+    </aside>
+    <main id="main">
+      <article id="content">
+        <h1>Welcome — Zero → Legend</h1>
+        <p>This is an interactive, branching learning journey through Hardware, Software, Python, and C/C++.
+        Use the left sidebar to pick a path. Your progress is saved locally in your browser.</p>
+        <p>Tips:</p>
+        <ul>
+          <li>Press <kbd>/</kbd> to jump to search</li>
+          <li>Use the “Choose your path” boxes at the bottom of many lessons</li>
+          <li>Quizzes appear inline; your answers update your progress</li>
+        </ul>
+        <p>Select a lesson in the sidebar to begin!</p>
+      </article>
+      <section id="path" class="path"></section>
+    </main>
+  </div>
+  <footer class="footer">
+    <span id="progressBar"><span></span></span>
+    <span id="progressText">0% complete</span>
+  </footer>
+  <script src="app.js"></script>
+</body>
+</html>
